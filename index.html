@@ -1,18 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Vanilla Challenge</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Focus To Do</title>
   </head>
-
   <body>
-    <script src="src/index.js"></script>
-    <h1>Random Number Game</h1>
-    <h3>Generate a number between 0 and </h3>
-    Guess the number: 
-    <form id="inputnum">
-    <input required type= "text">
-    <button>Play!</button>
+    <div id="clock" class="Digital_clock" type="digital">
+      <div class="Digital_time">
+        <span class="Digital_hour">00 </span>
+        <span class="text"> : </span>
+        <span class="Digital_min"> 00</span>
+      </div>
+        <div class="Digital_sub">
+          <span class="Digital_ampm">AM</span>
+          <span class="Digital_second">00</span>
+        </div>
+      </div>
+
+    <div id="logon">
+    <form class="hidden" id="login-form">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <input type="submit" value="My Name" />
     </form>
+    <h1 class="hidden" id="greeting"></h1>
+  </div>
+
+    <div class="custom-file">
+    <input type="file" class="custom-file-input" id="image-upload" accept="image/*">
+    <label class="custom-file-label" for="image-upload">Background Custom</label>
+    </div>
+
+    <form id="todo-form">
+      <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+      <span id="icon"><img id="wicon" src=""></span>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/random_mission.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
