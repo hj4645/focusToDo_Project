@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 캘린더 생성 라이브러리 이용 -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/afterlogin.css" />
     <title>Focus To Do</title>
   </head>
   <body>
+    <!-- 시계 -->
     <div id="clock" class="Digital_clock" type="digital">
       <div class="Digital_time">
         <span class="Digital_hour">00 </span>
@@ -17,43 +21,64 @@
           <span class="Digital_ampm">AM</span>
           <span class="Digital_second">00</span>
         </div>
-      </div>
-
+    </div>
+    <!-- 로그인 -->
     <div id="logon">
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="My Name" />
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <input type="submit" value="My Name" />
+      </form>
+      <h1 class="hidden" id="greeting"></h1>
+    </div>
+
+  
+    <!-- 로그인 후
+    <div id="animation-container" class="hidden">
+      <div id="white-rectangle">  -->
+        
+      <!-- 달력
+      <button id="calender_button" class="hidden">Calender</button>
+      <div id="calendar_container" class="hidden"></div>
+  </div> -->
+
+  <!-- <button id="logout-button" class="hidden">Logout</button> -->
+
+    <!-- todo list -->
+  <form id="todo-form">
+    <input type="text" placeholder="Write a To Do and Press Enter" required />
+  </form>
+  <ul id="todo-list"></ul>
+  <!-- 랜덤 문구 -->
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <!-- 날씨 -->
+  <div id="weather">
+    <span></span>
+    <span></span>
+    <span id="icon"><img id="wicon" src=""></span>
   </div>
 
+<!-- </div> -->
+
+  <!-- 커스텀 배경화면 -->
     <div class="custom-file">
     <input type="file" class="custom-file-input" id="image-upload" accept="image/*">
     <label class="custom-file-label" for="image-upload">Background Custom</label>
     </div>
 
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-      <span id="icon"><img id="wicon" src=""></span>
-    </div>
-    <script src="js/greetings.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/random_mission.js"></script>
     <script src="js/background.js"></script>
+    <!-- <script src="js/calender.js"></script> -->
+    <script src="js/clock.js"></script>
+    <!-- <script src="js/d_day.js"></script> -->
+    <script src="js/greetings.js"></script>
+    <script src="js/random_mission.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
   </body>
